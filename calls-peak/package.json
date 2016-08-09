@@ -1,0 +1,15 @@
+{
+  "name": "calls-peak",
+  "version": "0.0.1",
+  "description": "Calls peak",
+  "main": "lib/calls-peak",
+  "scripts": {
+    "start": "bin/calls-peak",
+    "test": "mocha"
+  },
+  "devDependencies": [
+    "mocha"
+  ],
+  "author": "Andrey Dergaev",
+  "license": "ISC"
+}
