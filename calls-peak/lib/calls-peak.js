@@ -115,6 +115,12 @@ let timeRange = {
 	toString: function() {
 		let message = 'No simultaneous calls in log';
 		if (this._maxCount) {
+			// Maybe need revert
+			if (this._maxStart > this._minEnd) {
+				let tmpStart = this._maxStart;
+				this._maxStart = this._minEnd;
+				this._minEnd = tmpStart;
+			}
 			message = [
 				`The peak for this call log is ${this._maxCount} simultaneous calls,`,
 				` that occurred between ${this._maxStart} and ${this._minEnd}.`
